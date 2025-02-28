@@ -1,0 +1,9 @@
+spring:
+ application:
+   name: postify
+ profiles:
+   active: dev
+
+server:
+   error:
+    include-message: always

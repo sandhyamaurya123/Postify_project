@@ -1,0 +1,39 @@
+server:
+  port: 8081
+  servlet:
+    context-path: /dev/api/${spring.application.name}
+security:
+  jwt:
+    secret-key: "t9RVbZHpQPL36Jxo6oUZIfUc6Sxo1DJn"
+    expiration-time: 60000
+    refresh-expiration-time: 180000
+
+
+spring:
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/postify
+    username: root
+    password: 2002
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+
+  mail:
+    properties:
+      mail:
+        smtp:
+          starttls:
+            enabled: true
+            required: true
+          auth: true
+    host: smtp.gmail.com
+    username: thoratakshada96@gmail.com
+    password: "vhfhbgdghlmdljks"
+    port: 587
